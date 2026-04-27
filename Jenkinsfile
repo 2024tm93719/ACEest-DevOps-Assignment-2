@@ -28,7 +28,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                bat 'sonar-scanner'
+                bat 'sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.login=sqa_26af21518b2b5aee483848f1bd77f1f58c5cc71a'
             }
         }
 
