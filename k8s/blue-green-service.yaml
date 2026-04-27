@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: aceest
-    track: blue
+    track: green
   ports:
     - port: 80
       targetPort: 5000
