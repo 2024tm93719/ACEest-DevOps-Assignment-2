@@ -39,6 +39,12 @@ pipeline {
             }
         }
 
+        stage('Docker Login') {
+            steps {
+               bat 'docker login -u vikashmahala -p dckr_pat_6kIqC7tkyRVkaYyIKkPMZvwWpuI'
+            }
+        }
+
         stage('Push Docker Image') {
             steps {
                 bat 'docker push %IMAGE_NAME%:%IMAGE_TAG%'
